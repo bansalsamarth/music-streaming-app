@@ -13,6 +13,6 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/login/$', login, {'template_name': 'login.html'}),
-    url(r'^accounts/logout/$', logout),
+    url(r'^accounts/logout/$', logout, {'template_name': 'logout.html'}),
     url(r'^', include(music_urls)),
 )

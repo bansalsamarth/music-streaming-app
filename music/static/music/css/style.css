@@ -7,9 +7,13 @@
 	text-align: center;
 	color: white;
 	padding-top: 80px;
-	height:350px;
+	height:250px;
 	background-color: #2C3E50;
 	
+}
+
+.logout-msg{
+	text-align: center;
 }
 
 .nav-search{
