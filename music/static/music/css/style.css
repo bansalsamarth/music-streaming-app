@@ -1,3 +1,17 @@
+.landing-body{
+	background-image: url("/static/music/img/restaurant_icons.png");
+}
+
+.landing-banner{
+	font-size: 100px;
+	text-align: center;
+	color: white;
+	padding-top: 80px;
+	height:350px;
+	background-color: #2C3E50;
+	
+}
+
 .nav-search{
 	height: 40px;
 }
