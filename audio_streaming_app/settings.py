@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'music',
     'south',
+    'djcelery',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -53,6 +54,18 @@ ROOT_URLCONF = 'audio_streaming_app.urls'
 
 WSGI_APPLICATION = 'audio_streaming_app.wsgi.application'
 
+#--------------------------------------------Celery Configuration----------------------------------------------------#
+import djcelery, urlparse
+djcelery.setup_loader()
+
+BROKER_URL = os.environ.get('CLOUDAMQP_URL', 'amqp://guest:guest@localhost//')
+BROKER_POOL_LIMIT = 1
+
+ELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend'
+CELERY_BEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
+
+CELERY_TIMEZONE = 'Asia/Kolkata'
+#--------------------------------------------End of Celery Configuration----------------------------------------------#
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
