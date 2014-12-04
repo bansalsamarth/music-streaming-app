@@ -5,9 +5,24 @@
 	<hr>
 	<div> <!--style="display:none"-->
 
-	<audio controls="" autoplay="" name="media">
-		<source src="{{radio_url}}" type="application/ogg">
-	</audio>
+	<div class = "col-sm-3"></div>
+	{%if not status%}
+		<div class="col-sm-6 alert alert-warning" role="alert">
+			<center><h4>Radio Station Not Live!</h4></center>
+		</div>
+	{%else%}
+		<div class="col-sm-6">
+			<div class="live_status alert alert-success" role="alert">
+				<center><h4>Radio Station Live!</h4></center>
+			</div>
+			<br>
+			<center>
+				<audio controls="" autoplay="" name="media">
+					<source src="{{radio_url}}" type="application/ogg">
+				</audio>
+			</center>
+		</div>
+	{%endif%}
 
 	</div>
 </div>

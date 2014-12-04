@@ -1,0 +1,65 @@
+{%extends "base.html"%}
+{%block content%}
+<div class = "container">
+	<h3>Create Station</h3>
+	<hr>
+	<form action="/radio_setup" method="POST">
+		{%csrf_token%}
+		<div class = "row">
+			<div class = "col-sm-2">
+				<img src="http://media.tumblr.com/tumblr_m7mcv5ClEp1qzxlbn.jpg" class = "main-song-thumb">
+				<hr>
+				<center><input type="checkbox" name="songs[]" value="haunted1">
+				<br>Haunted 1</center>
+				<hr>
+			</div>
+
+			<div class = "col-sm-2">
+				<img src="http://media.tumblr.com/tumblr_m7mcv5ClEp1qzxlbn.jpg" class = "main-song-thumb">
+				<hr>
+				<center><input type="checkbox" name="songs[]" value="haunted2">
+				<br>Haunted 2</center>
+				<hr>
+			</div>
+
+			<div class = "col-sm-2">
+				<img src="http://media.tumblr.com/tumblr_m7mcv5ClEp1qzxlbn.jpg" class = "main-song-thumb">
+				<hr>
+				<center><input type="checkbox" name="songs[]" value="haunted3">
+				<br>Haunted 3</center>
+				<hr>
+			</div>
+
+
+			<div class = "col-sm-2">
+				<img src="http://media.tumblr.com/tumblr_m7mcv5ClEp1qzxlbn.jpg" class = "main-song-thumb">
+				<hr>
+				<center><input type="checkbox" name="songs[]" value="rnd1">
+				<br>RnD1</center>
+				<hr>
+			</div>
+
+			<div class = "col-sm-2">
+				<img src="http://media.tumblr.com/tumblr_m7mcv5ClEp1qzxlbn.jpg" class = "main-song-thumb">
+				<hr>
+				<center><input type="checkbox" name="songs[]" value="rnd2">
+				<br>RnD2</center>
+				<hr>
+			</div>
+
+			<div class = "col-sm-2">
+				<img src="http://media.tumblr.com/tumblr_m7mcv5ClEp1qzxlbn.jpg" class = "main-song-thumb">
+				<hr>
+				<center><input type="checkbox" name="songs[]" value="ty1">
+				<br>Thank You 1</center>
+				<hr>
+			</div>
+
+		</div>		
+			
+		<br>
+
+		<input type="submit" class="btn btn-success" value="Create">
+	</form>
+</div>
+{%endblock%}

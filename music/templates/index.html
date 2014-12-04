@@ -1,20 +1,22 @@
 {%extends "base.html"%}
 {%block content%}
 	<div style="margin-right:20px;"><h5 align = "right">Welcome {{user.username}}!</h5></div>
-
 	<div class="container">
 		<div class = "row">
+			<center><h2>Create your Radio Station!</h2></center>
 			<div class = "col-sm-3"></div>
 			<div class = "col-sm-6">
 				<div class="form-group">
 					<!--<label class="control-label" for="inputDefault">Play your favorite music now!</label>-->
-					<input type="text" class="form-control main-search-bar" id="inputDefault">
+					<br>
+					<input type="text" class="form-control main-search-bar" id="inputDefault" placeholder = "Search for Online Radio Channels">
 				</div>
 			</div>
 		</div>
+		<hr>
 
 		<div class = "row">
-			<h3>Play Now</h3>
+			<center><h4>Make your own radio station. Ask your friends to plug into your channel. Enjoy Music together!</h4></center>
 			<hr>
 			<div class = "col-sm-2">
 				<img src="http://media.tumblr.com/tumblr_m7mcv5ClEp1qzxlbn.jpg" class = "main-song-thumb">
@@ -55,12 +57,5 @@
 
 		</div>
 		<hr>
-		<div class = "row">
-			<div class = "col-sm-4"></div>
-			<div class = "col-sm-4">
-				<a href="#" class="btn btn-success surprise-button">Surprise Me</a>
-			</div>
-			<div class = "col-sm-4"></div>
-		</div>
 	</div>
 {%endblock%}

@@ -13,10 +13,16 @@ class Album(models.Model):
 
 class Track(models.Model):
     name = models.TextField()
-    album = models.ForeignKey(Album)
-    artist = models.ManyToManyField(Artist)
+    album = models.ForeignKey(Album, blank = True, null = True)
+    artist = models.ManyToManyField(Artist, blank = True, null = True)
+    url = models.TextField(blank = True, null = True)
     img = models.TextField(blank = True, null = True)
-    duration = models.CharField(max_length = 10)
-    bitrate = models.CharField(max_length = 10)
-    release_year = models.IntegerField()
+    duration = models.CharField(max_length = 10, blank = True, null = True)
+    bitrate = models.CharField(max_length = 10, blank = True, null = True)
+    release_year = models.IntegerField(blank = True, null = True)
     added = models.DateTimeField(auto_now_add = True)
+
+class RadioStations(models.Model):
+    name = models.TextField()
+    created = models.DateTimeField(auto_now_add = True)
+    active = models.BooleanField(default = True)
